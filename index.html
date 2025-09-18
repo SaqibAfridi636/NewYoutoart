@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOUTOOART</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+       <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    'sm': '640px',
+                    // => @media (min-width: 640px) { ... }
+
+                    'md': '768px',
+                    // => @media (min-width: 768px) { ... }
+
+                    'lg': '1024px',
+                    // => @media (min-width: 1024px) { ... }
+
+                    'xl': '1280px',
+                    // => @media (min-width: 1280px) { ... }
+
+                    '2xl': '1536px',
+                    // => @media (min-width: 1536px) { ... }
+                },
+                extend: {
+                    screens: {
+                        'xs': { 'min': '320px', 'max': '567px' },
+
+                    },
+                    colors: {
+                        
+                            100: '#000000',
+                            200: '#ff9999',
+                            300: '#ff6666',
+                            400: '#ff3333',
+                            500: '#ff0000',
+                            transparent: 'transparent',
+                            current: 'currentColor',
+                            'white': '#ffffff',
+                            'purple': '#3f3cbb',
+                            'midnight': '#121063',
+                            'metal': '#565584',
+                            'tahiti': '#3ab7bf',
+                            'silver': '#ecebff',
+                            'bubble-gum': '#ff77e9',
+                            'bermuda': '#78dcca',
+                    
+                    },
+
+                },
+            },
+        }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
