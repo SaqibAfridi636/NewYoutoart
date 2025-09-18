@@ -5,8 +5,6 @@ import PakistanFlag from "../../../assets/images/Pakistanflag.png"; // add your 
 const AboutTab = () => {
   return (
     <div className="bg-white p-4 shadow rounded">
-    
-
       {/* Bio */}
       <div className="mb-4">
         <h2 className=" text-gray-400 text-lg mb-2">Bio</h2>
