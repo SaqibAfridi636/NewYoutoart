@@ -13,6 +13,10 @@ import Casting from "../components/pages/Casting/Casting";
 import Chat from "../components/pages/Chat/Chat";
 import Profile from "../components/pages/Profile/Profile";
 import TransactionHistory from "../components/pages/TransactionHistory/TransactionHistory";
+import Support from "../components/pages/Support/Support";
+import AboutUs from "../components/pages/AboutUs/AboutUs";
+import TermsConditions from "../components/pages/TermCondition/TermCondition";
+import PrivacyPolicy from "../components/pages/PrivacyPolicy/PrivacyPolicy";
 
 const AppRoutes = () => {
     return (
@@ -29,6 +33,10 @@ const AppRoutes = () => {
             <Route path="/chat" element={<Chat />} />
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/transactions" element={<TransactionHistory/>}/>
+            <Route path="/support" element={<Support/>}/>
+            <Route path="/about" element={<AboutUs/>}/>
+            <Route path="/terms" element={<TermsConditions/>}/>
+            <Route path="privacy" element={<PrivacyPolicy/>} />
         </Routes>
     );
 };

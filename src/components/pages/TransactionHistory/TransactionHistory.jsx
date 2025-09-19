@@ -4,6 +4,7 @@ import { FiSearch } from "react-icons/fi";
 import Sidebar from "../../common/layout/Sidebar/Sidebar";
 import Accept from "../../../assets/Icons/Accept.png";
 import Rejecticon from "../../../assets/Icons/Rejecticon.png";
+import NotificationSection from "../../common/NotificationSection";
 import Notificationicon from "../../../assets/Icons/Notificationicon.png";
 
 const transactions = [
@@ -82,7 +83,7 @@ const TransactionHistory = () => {
 
       {/* Main Content */}
       <div className="flex-1 p-[10px]">
-        {/* Page Header (separate from card) */}
+        {/* Page Header */}
         <div className="w-full h-[60px] flex justify-between items-center bg-white px-4 shadow mb-6">
           <h2 className="text-xl font-semibold">Transaction History</h2>
 
@@ -108,28 +109,24 @@ const TransactionHistory = () => {
                 className="w-6 h-6"
               />
               {showNotifications && (
-                <div className="absolute right-0 mt-2 w-64 bg-white shadow rounded-md p-4 z-10">
-                  <p className="text-sm text-gray-600">
-                    No new notifications.
-                  </p>
+                <div className="absolute right-0 mt-2">
+                  <NotificationSection />
                 </div>
               )}
             </button>
           </div>
         </div>
 
-        {/* White Card with Transactions */}
+        {/* Transactions Card */}
         <div className="bg-white rounded-md shadow p-6">
           {transactions.map((day) => (
             <div key={day.id} className="mb-8">
-              {/* Date + Amount header */}
+              {/* Date + Amount */}
               <div className="flex justify-between items-center border-b pb-1 mb-3">
                 <span className="text-sm font-medium text-gray-600">
                   {day.date}
                 </span>
-                <span className="text-blue-600 font-semibold">
-                  {day.amount}
-                </span>
+                <span className="text-blue-600 font-semibold">{day.amount}</span>
               </div>
 
               {/* Transactions List */}
