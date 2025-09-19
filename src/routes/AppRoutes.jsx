@@ -12,6 +12,7 @@ import Network from "../components/pages/Network/Network";
 import Casting from "../components/pages/Casting/Casting";
 import Chat from "../components/pages/Chat/Chat";
 import Profile from "../components/pages/Profile/Profile";
+import TransactionHistory from "../components/pages/TransactionHistory/TransactionHistory";
 
 const AppRoutes = () => {
     return (
@@ -27,6 +28,7 @@ const AppRoutes = () => {
             <Route path="/casting" element={<Casting />} />
             <Route path="/chat" element={<Chat />} />
             <Route path="/profile" element={<Profile/>}/>
+            <Route path="/transactions" element={<TransactionHistory/>}/>
         </Routes>
     );
 };

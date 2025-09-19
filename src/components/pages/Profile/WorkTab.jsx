@@ -55,7 +55,7 @@ const WorkTab = () => {
           </div>
           <div className="flex items-center gap-2">
             <button className="p-1 rounded-full hover:bg-gray-100">
-              <img src={Editicon} alt="edit" className="w-4 h-4" />
+              <img src={Editicon} alt="edit" className="w-4 h-4 " />
             </button>
             <button className="p-1 rounded-full hover:bg-gray-100">
               <img src={Pluseicon} alt="add" className="w-4 h-4" />
