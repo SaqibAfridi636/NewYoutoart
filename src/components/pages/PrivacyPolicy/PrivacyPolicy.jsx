@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
         {/* Header */}
-        <header className="w-full bg-white shadow-sm p-4 flex items-center justify-between">
+        <header className="w-full bg-white shadow-sm p-2 flex items-center justify-between">
           {/* Left side - Hamburger + Title */}
           <div className="flex items-center space-x-3">
             {/* Mobile Hamburger */}
@@ -35,14 +35,14 @@ const PrivacyPolicy = () => {
           {/* Right side - Search + Notification */}
           <div className="flex items-center space-x-4">
             {/* Search Bar */}
-            <div className="relative w-40 sm:w-56 md:w-64">
-              <input
-                type="text"
-                placeholder="Search"
-                className="w-full border rounded-md pl-8 pr-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
-              />
-              <FiSearch className="absolute left-2.5 top-3 text-gray-400" />
-            </div>
+            <div className="relative">
+                       <input
+                         type="text"
+                         placeholder="Search"
+                         className="w-[220px] lg:w-[300px] pl-8 pr-3 py-2 rounded-full bg-gray-100 text-sm focus:outline-none"
+                       />
+                       <FiSearch className="absolute left-2.5 top-2.5 text-gray-500" />
+                     </div>
 
             {/* Notification */}
             <div className="relative">
@@ -64,7 +64,7 @@ const PrivacyPolicy = () => {
         </header>
 
         {/* Content */}
-        <main className="flex-1 p-5 md:p-8 ">
+        <main className="flex-1 p-5 md:p-6 ">
           <h2 className="text-2xl font-bold mb-2">Privacy Policy</h2>
           <p className="text-sm text-gray-500 mb-6">Effective Date: 25 Nov, 2022</p>
 

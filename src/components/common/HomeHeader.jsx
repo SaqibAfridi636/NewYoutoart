@@ -13,12 +13,12 @@ const HomeHeader = () => {
   return (
     <div className="relative w-full bg-white shadow-sm">
       {/* Header Bar */}
-      <div className="h-[60px] flex items-center justify-between px-6">
+      <div className="h-[65px] flex items-center justify-between px-6">
         {/* Left side: Greeting */}
         <h1 className="text-lg font-medium">Hi Wajahat!</h1>
 
         {/* Right side: Search + Notification */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
           {/* Search bar */}
           <div className="relative">
             <input
@@ -34,7 +34,7 @@ const HomeHeader = () => {
             <img
               src={Notificationicon}
               alt="Notifications"
-              className="w-6 h-6 cursor-pointer"
+              className="w-8 h-8 cursor-pointer"
             />
           </button>
         </div>

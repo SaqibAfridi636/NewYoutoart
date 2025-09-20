@@ -89,14 +89,14 @@ const TransactionHistory = () => {
 
           <div className="flex items-center gap-4">
             {/* Search */}
-            <div className="relative w-64">
-              <input
-                type="text"
-                placeholder="Search"
-                className="w-full border rounded-md pl-8 pr-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
-              />
-              <FiSearch className="absolute left-2.5 top-3 text-gray-400" />
-            </div>
+            <div className="relative">
+                       <input
+                         type="text"
+                         placeholder="Search"
+                         className="w-[220px] lg:w-[300px] pl-8 pr-3 py-2 rounded-full bg-gray-100 text-sm focus:outline-none"
+                       />
+                       <FiSearch className="absolute left-2.5 top-2.5 text-gray-500" />
+                     </div>
 
             {/* Notifications */}
             <button

@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import Sidebar from "../../common/layout/Sidebar/Sidebar";
 import Accepticon from "../../../assets/Icons/Accepticon.png";
 import Closeicon from "../../../assets/Icons/Closeicon.png";
-import Messageicon from "../../../assets/Icons/Messageicon.png";
 import HomeHeader from "../../common/HomeHeader";
 import NotificationSection from "../../common/NotificationSection";
-
+import Messaageicon from "../../../assets/Icons/Messageicon.png";
+import Jeremiahgreenimage from "../../../assets/images/Jeremiahgreenimage.png";
+import Ali from "../../../assets/images/Aliimage.png";
 // Dummy Data
 const requests = [
   { id: 1, name: "Muhammad Ali Nizam", role: "Designer", image: "/assets/images/user1.png" },
-  { id: 2, name: "Aliza Sheikh", role: "UI/UX", image: "/assets/images/user2.png" },
-  { id: 3, name: "Sana Khan", role: "Developer", image: "/assets/images/user2.png" },
+  { id: 2, name: "Ali Sheikh", role: "UI/UX", image: "/assets/images/user2.png" },
+  { id: 3, name: "Saqib Khan", role: "Developer", image: "/assets/images/user2.png" },
   { id: 4, name: "Bilal Ahmed", role: "Manager", image: "/assets/images/user2.png" },
-  { id: 5, name: "Hina Raza", role: "Artist", image: "/assets/images/user2.png" },
+  { id: 5, name: " Raza", role: "Artist", image: "/assets/images/user2.png" },
   { id: 6, name: "Usman Tariq", role: "Engineer", image: "/assets/images/user2.png" },
 ];
 
@@ -71,7 +72,7 @@ const Network = () => {
                   className="bg-white p-4 rounded-xl shadow-md text-center"
                 >
                   <img
-                    src={req.image}
+                    src={Ali}
                     alt={req.name}
                     className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover mx-auto mb-3"
                   />
@@ -104,7 +105,7 @@ const Network = () => {
                   className="bg-white p-4 rounded-xl shadow-md text-center"
                 >
                   <img
-                    src={con.image}
+                    src={Jeremiahgreenimage}
                     alt={con.name}
                     className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover mx-auto mb-3"
                   />
@@ -114,8 +115,8 @@ const Network = () => {
                     <button className="px-2 sm:px-3 py-1 bg-gray-800 text-white text-xs sm:text-sm rounded-md hover:bg-gray-900">
                       Remove
                     </button>
-                    <button className="px-2 sm:px-3 py-1 rounded-md border hover:bg-gray-100">
-                      <img src={Messageicon} alt="Message" className="w-4 h-4" />
+                    <button className=" px-2 sm:px-3 py-1 rounded-md  hover:bg-gray-100">
+                      <img src={Messaageicon} alt="Message" className="w-6 h-6" />
                     </button>
                   </div>
                 </div>

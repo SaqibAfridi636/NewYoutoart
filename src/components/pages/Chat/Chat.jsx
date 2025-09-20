@@ -1,5 +1,6 @@
 // src/pages/ChatPage.jsx
 import React, { useState } from "react";
+import { FiSearch } from "react-icons/fi";
 import Sidebar from "../../common/layout/Sidebar/Sidebar";
 import ChatList from "../Chat/ChatList";
 import ChatSection from "../Chat/ChatSection";
@@ -91,11 +92,15 @@ const ChatPage = () => {
                 <div className="flex items-center justify-between border-b p-4 bg-white flex-shrink-0">
                     <h2 className="text-lg font-semibold">Chats</h2>
                     <div className="flex items-center space-x-3">
-                        <input
-                            type="text"
-                            placeholder="Search messages..."
-                            className="border rounded-full px-3 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
-                        />
+                          {/* Search bar */}
+                                 <div className="relative">
+                                   <input
+                                     type="text"
+                                     placeholder="Search"
+                                     className="w-[220px] lg:w-[300px] pl-8 pr-3 py-2 rounded-full bg-gray-100 text-sm focus:outline-none"
+                                   />
+                                   <FiSearch className="absolute left-2.5 top-2.5 text-gray-500" />
+                                 </div>
                         <button className="bg-black text-white px-4 py-1 rounded-full text-sm hover:bg-gray-800">
                             + New Chat
                         </button>

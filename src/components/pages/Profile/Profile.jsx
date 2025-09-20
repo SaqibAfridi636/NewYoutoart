@@ -60,9 +60,9 @@ const Profile = () => {
               <input
                 type="text"
                 placeholder="Search"
-                className="border rounded-full pl-8 pr-3 py-1 text-sm focus:outline-none"
+                className="w-[220px] lg:w-[300px] pl-8 pr-3 py-2 rounded-full bg-gray-100 text-sm focus:outline-none"
               />
-              <FiSearch className="absolute left-2 top-2 text-gray-500" />
+              <FiSearch className="absolute left-2.5 top-2.5 text-gray-500" />
             </div>
             <button
               onClick={() => setShowNotifications(!showNotifications)}
@@ -135,11 +135,10 @@ const Profile = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-4 md:px-6 py-2 flex items-center space-x-2 text-sm md:text-base ${
-                activeTab === tab.id
+              className={`px-4 md:px-6 py-2 flex items-center space-x-2 text-sm md:text-base ${activeTab === tab.id
                   ? "border-b-2 border-black font-semibold text-black"
                   : "text-gray-500"
-              }`}
+                }`}
             >
               <img src={tab.icon} alt={tab.label} className="w-5 h-5" />
               <span>{tab.label}</span>
