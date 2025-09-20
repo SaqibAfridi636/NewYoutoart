@@ -2,37 +2,58 @@
 import Castingicon from "../../../assets/Icons/Castingicon.png";
 import Appliedicon from "../../../assets/Icons/Appliedicon.png";
 
+const Tab = ({ id, active, onClick, iconSrc, label }) => (
+  <button
+    onClick={() => onClick(id)}
+    className={`flex items-center gap-2 text-sm md:text-[15px] font-semibold whitespace-nowrap transition-colors
+      ${active ? "text-black" : "text-gray-600 hover:text-gray-800"}`}
+  >
+    {/* icon with blue ring when active */}
+    <span
+      className={`inline-flex items-center justify-center rounded-full
+        ${active ? "ring-2 ring-blue-500/80 ring-offset-2 ring-offset-white" : ""}`}
+    >
+      <img
+        src={iconSrc}
+        alt={label}
+        className={`w-5 h-5 ${active ? "" : "opacity-70"}`}
+      />
+    </span>
+    <span>{label}</span>
+  </button>
+);
+
+const Separator = () => (
+  <span className="mx-3 text-gray-300 select-none">✧</span>
+);
+
 const CastingHeader = ({ activeTab, setActiveTab }) => {
   return (
-    <div className="bg-white shadow-sm px-4 md:px-6 py-3 md:py-4 m-2 flex items-center border-b space-x-6">
-      <div
-        className={`flex items-center space-x-2 font-semibold cursor-pointer ${
-          activeTab === "casting" ? "text-black" : "text-gray-700"
-        }`}
-        onClick={() => setActiveTab("casting")}
-      >
-        <img src={Castingicon} alt="casting" className="w-5 h-5" />
-        <span>Casting Call</span>
-      </div>
-
-      <div
-        className={`flex items-center space-x-2 font-semibold cursor-pointer ${
-          activeTab === "applied" ? "text-black" : "text-gray-700"
-        }`}
-        onClick={() => setActiveTab("applied")}
-      >
-        <img src={Appliedicon} alt="applied" className="w-5 h-5" />
-        <span>Applied</span>
-      </div>
-
-      <div
-        className={`flex items-center space-x-2 font-semibold cursor-pointer ${
-          activeTab === "my" ? "text-black" : "text-gray-700"
-        }`}
-        onClick={() => setActiveTab("my")}
-      >
-        <img src={Castingicon} alt="my casting" className="w-5 h-5" />
-        <span>My Casting Calls</span>
+    <div className="bg-white px-3 md:px-5 py-2 md:py-3 border-b shadow-sm/0 flex items-center">
+      <div className="flex items-center gap-4">
+        <Tab
+          id="casting"
+          active={activeTab === "casting"}
+          onClick={setActiveTab}
+          iconSrc={Castingicon}
+          label="Casting Calls"
+        />
+        {/* <Separator /> */}
+        <Tab
+          id="applied"
+          active={activeTab === "applied"}
+          onClick={setActiveTab}
+          iconSrc={Appliedicon}
+          label="Applied"
+        />
+        {/* <Separator /> */}
+        <Tab
+          id="my"
+          active={activeTab === "my"}
+          onClick={setActiveTab}
+          iconSrc={Castingicon}
+          label="My Casting Calls"
+        />
       </div>
     </div>
   );
