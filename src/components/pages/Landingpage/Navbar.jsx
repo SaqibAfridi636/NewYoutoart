@@ -25,11 +25,11 @@ const Navbar = () => {
                         </div>
 
                         {/* Desktop menu */}
-                        <div className="hidden sm:ml-6 sm:block pl-[60px]">
+                        <div className="hidden sm:ml-6 sm:block pl-4 sm:pl-16">
                             <div className="flex space-x-6">
-                                <a href="#" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-black">Home</a>
-                                <a href="#" className="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black">Talent</a>
-                                <a href="#" className="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black">Casting Call</a>
+                                <Link to="/home" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-black">Home</Link>
+                                <Link to="/talent" className="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black">Talent</Link>
+                                <Link to="/casting" className="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black">Casting Call</Link>
                                 <a href="#" className="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black">Categories</a>
                                 <a href="#" className="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black">Content</a>
                                 <a href="#" className="px-3 py-2 text-sm font-medium text-gray-500 hover:text-black">How it Works</a>
@@ -42,9 +42,9 @@ const Navbar = () => {
                     {/* Right side (desktop only) */}
                     <div className="hidden sm:flex items-center">
                         <button
-                            onClick={() => navigate("/Login")}
+                            onClick={() => navigate("/signup")}
                             type="button"
-                            className="w-[92px] h-[33px] rounded-[20px] bg-gray-200 text-sm font-medium text-black"
+                            className="px-3 py-1.5 rounded-full bg-gray-200 text-sm font-medium text-black"
                         >
                             Sign Up
                         </button>
@@ -97,10 +97,10 @@ const Navbar = () => {
             {/* Mobile dropdown menu */}
             {menuOpen && (
                 <div className="sm:hidden absolute left-0 right-0 mt-2 w-full rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-20">
-                    <div className="py-2">
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Home</a>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Talent</a>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Casting Call</a>
+                        <div className="py-2">
+                        <Link to="/home" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Home</Link>
+                        <Link to="/talent" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Talent</Link>
+                        <Link to="/casting" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Casting Call</Link>
                         <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Categories</a>
                         <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Content</a>
                         <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">How it Works</a>
@@ -108,10 +108,11 @@ const Navbar = () => {
                         <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
 
                         {/* Sign Up button inside dropdown */}
-                        <div className="px-4 mt-2">
+                        <div className="px-4 mt-4">
                             <button
                                 type="button"
-                                className="w-full h-[40px] rounded-[20px] bg-gray-200 text-sm font-medium text-black mt-[50px]"
+                                onClick={() => { setMenuOpen(false); navigate('/signup'); }}
+                                className="w-full h-10 rounded-full bg-gray-200 text-sm font-medium text-black"
                             >
                                 Sign Up
                             </button>

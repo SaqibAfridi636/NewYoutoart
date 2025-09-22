@@ -10,10 +10,19 @@ const OTP = () => {
     const [showCreatedPopup, setShowCreatedPopup] = useState(false);
     const [showCompleteProfilePopup, setShowCompleteProfilePopup] = useState(false);
     const [showStep2Popup, setShowStep2Popup] = useState(false);
+    const [showVerifySuccess, setShowVerifySuccess] = useState(false);
+
 
     const handleVerify = () => {
         if (otp.length === 6) {
-            setShowCreatedPopup(true);
+            // show green success popup first
+            setShowVerifySuccess(true);
+
+            // after a short moment, hide success and open "Account Created"
+            setTimeout(() => {
+                setShowVerifySuccess(false);
+                setShowCreatedPopup(true);
+            }, 1200); // feel free to tweak the duration
         } else {
             alert("Please enter a valid 6-digit OTP");
         }
@@ -27,6 +36,15 @@ const OTP = () => {
     const handleSaveAndNext = () => {
         setShowCompleteProfilePopup(false);
         setShowStep2Popup(true);
+    };
+
+    // When user wants to skip completing profile for now
+    const handleSkipProfile = () => {
+        // Close any profile-related popups
+        setShowCompleteProfilePopup(false);
+        setShowStep2Popup(false);
+        setShowCreatedPopup(false);
+        // Optionally navigate to home or keep user on the same page. We'll keep them on the same page.
     };
 
     return (
@@ -43,7 +61,7 @@ const OTP = () => {
                 <div className="flex flex-col justify-center flex-1">
                     <button
                         onClick={() => navigate(-1)}
-                        className="text-2xl font-bold mb-2"
+                        className="text-2xl  font-bold mb-2 pr-[500px]"
                     >
                         ←
                     </button>
@@ -106,6 +124,28 @@ const OTP = () => {
                     </div>
                 )}
 
+                {/* ✅ Verification Success Popup */}
+                {showVerifySuccess && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+                        <div className="bg-white rounded-xl shadow-lg p-8 text-center">
+                            <div className="mx-auto mb-4 h-20 w-20 rounded-full bg-emerald-500 grid place-items-center">
+                                {/* Checkmark (SVG) */}
+                                <svg viewBox="0 0 24 24" className="h-10 w-10 text-white">
+                                    <path
+                                        fill="currentColor"
+                                        d="M9.0 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
+                                    />
+                                </svg>
+                            </div>
+                            <h3 className="text-xl font-bold">Verification Successful</h3>
+                        </div>
+                    </div>
+                )}
+
+
+
+
+
                 {/* ✅ Step 1 - Choose Category Popup */}
                 {showCompleteProfilePopup && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
@@ -153,7 +193,7 @@ const OTP = () => {
                             </div>
 
                             <div className="mt-6 ml-auto flex gap-4">
-                                <button className="w-[150px] h-10 bg-gray-200 rounded-full">
+                                <button onClick={handleSkipProfile} className="w-[150px] h-10 bg-gray-200 rounded-full">
                                     Skip For Now
                                 </button>
                                 <button
@@ -222,7 +262,7 @@ const OTP = () => {
                             <div className="mt-auto flex justify-between">
                                 <button className="w-[100px] h-10 bg-gray-200 text-blue-500 rounded-full">Back</button>
                                 <div className="flex gap-4">
-                                    <button className="w-[120px] h-10 bg-gray-200 rounded-full">Skip For Now</button>
+                                    <button onClick={() => { handleSkipProfile(); navigate('/home'); }} className="w-[120px] h-10 bg-gray-200 rounded-full">Skip For Now</button>
                                     <button
                                         onClick={() => navigate("/home")}  // ✅ Navigate to home
                                         className="w-[110px] h-10 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition"

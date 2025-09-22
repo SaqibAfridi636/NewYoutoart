@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <footer className="w-full bg-black text-white py-8">
             {/* Top Row */}
-            <div className="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
 
                 {/* Logo + Brand */}
                 <div className="flex items-center">
@@ -30,7 +30,7 @@ const Footer = () => {
                 <div className="mt-4 md:mt-0">
                     <button
                         type="button"
-                        className="ml-auto w-[92px] h-[33px] rounded-[20px] bg-black border border-white text-sm font-medium hover:bg-white hover:text-black transition"
+                        className="ml-auto px-3 py-1.5 rounded-full bg-black border border-white text-sm font-medium hover:bg-white hover:text-black transition"
                     >
                         Sign Up
                     </button>
@@ -38,10 +38,10 @@ const Footer = () => {
             </div>
 
             {/* Divider */}
-            <hr className="max-w-[100%] mx-auto my-6 border-gray-700" />
+            <hr className="w-full mx-auto my-6 border-gray-700" />
 
             {/* Bottom Row */}
-            <div className="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
 
                 {/* Copyright */}
                 <p className="text-sm text-gray-400">

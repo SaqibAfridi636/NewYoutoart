@@ -4,11 +4,11 @@ import HeroImage from '../../../assets/images/HeroImage.png'
 const LandingHero = () => {
   return (
     <section className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row items-center">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 flex flex-col md:flex-row items-center">
 
         {/* Left content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
             Connect, Collaborate, Create:{" "}
             <span className="text-red-500">YouTooArt</span> – Your Artistic
             Marketplace.
@@ -18,7 +18,7 @@ const LandingHero = () => {
             creative visions to life. Join the artistic revolution at YouTooArt.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
-            <button className="px-6 py-3 bg-white text-black rounded-lg shadow hover:bg-gray-800">
+            <button className="px-6 py-3 bg-white text-black rounded-lg shadow hover:bg-gray-800 w-full sm:w-auto">
               Get Started
             </button>
           </div>
@@ -39,11 +39,11 @@ const LandingHero = () => {
         </div>
 
         {/* Right image */}
-        <div className="w-full md:w-1/2  flex justify-center mb-8 md:mb-0">
+        <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
           <img
             src={HeroImage}
             alt="Artists illustration"
-            className="max-w-full h-auto sm:w-[100%]"
+            className="max-w-full h-auto w-full sm:w-11/12 md:w-full lg:w-10/12"
           />
         </div>
       </div>
