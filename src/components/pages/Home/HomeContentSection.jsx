@@ -86,7 +86,7 @@ const ContentSection = () => {
                         onClick={() => setIsModalOpen(true)}
                     >
                         <img src={UserLogo} alt="User" className="w-10 h-10 rounded-full" />
-                        <p className="text-gray-400">Have something to share?</p>
+                         <p className="text-gray-400">Have something to share?</p>
                     </div>
                     <div className="flex gap-6 ml-[10px]">
                         <button className="flex items-center gap-2 text-blue-500">

@@ -11,6 +11,7 @@ const FindTalentSection = () => {
     { id: 5, name: "Jeremiah Green", role: "Actor | Model | Director", img: Jeremiahgreenimage },
   ];
 
+
   return (
     <section className="bg-white py-16 px-6 md:px-12 lg:px-24">
       {/* Heading */}
@@ -18,6 +19,7 @@ const FindTalentSection = () => {
         <h2 className="text-4xl  text-gray-900">Find The Right Talent</h2>
         <p className="text-gray-600 mt-2">Find the right Talent for your new project</p>
       </div>
+
 
       {/* Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 auto-rows-fr">
