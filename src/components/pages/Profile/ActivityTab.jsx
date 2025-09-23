@@ -43,8 +43,8 @@ const ActivityTab = () => {
         <span className="text-blue-500">#Reveal #Audition #FawadKhan</span>
       </p>
 
-      {/* Post Image */}
-      <img src={Postpicture} alt="Post" className="rounded-lg mb-3 w-full" />
+  {/* Post Image */}
+  <img src={Postpicture} alt="Post" className="rounded-lg mb-3 w-full object-cover" style={{ aspectRatio: '1 / 1', objectFit: 'cover' }} />
 
       {/* Actions */}
       <div className="flex justify-start gap-6 text-gray-600 text-sm mt-[5px] font-medium">

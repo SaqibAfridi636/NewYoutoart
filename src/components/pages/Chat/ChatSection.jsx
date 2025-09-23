@@ -30,7 +30,7 @@ const ChatSection = ({ selectedChat, newMessage, setNewMessage, sendMessage }) =
   }
 
   return (
-    <section className="flex flex-col flex-1 overflow-hidden">
+    <section className="flex flex-col flex-1 min-h-0 overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between border-b p-4 bg-white">
         <div className="flex items-center gap-3">

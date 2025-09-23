@@ -9,12 +9,12 @@ const TermsConditions = () => {
   const [showNotifications, setShowNotifications] = useState(false);
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex h-screen overflow-hidden bg-gray-50">
       {/* Sidebar */}
       <Sidebar />
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col min-h-0">
         {/* ✅ Keep your old Header */}
         <header className="w-full bg-white shadow-sm p-2 flex items-center justify-between relative">
           <h1 className="text-lg font-semibold text-gray-800">
@@ -50,73 +50,74 @@ const TermsConditions = () => {
           </div>
         </header>
 
-        {/* ✅ Content updated to match screenshot */}
-      
-<main className="w-full flex-1 px-6 md:px-12 py-8">
-  <h2 className="text-2xl font-bold mb-1">Terms & Conditions</h2>
-  <p className="text-sm text-gray-500 mb-6">Effective Date: 25 Nov, 2022</p>
 
-  {/* Section 1 */}
-  <section className="mb-6">
-    <h3 className="font-semibold mb-2">1. Introduction</h3>
-    <p className="text-[13px] text-gray-700 leading-7">
-      Welcome to the You2Art App ("App", "We", "Us," or "Our"). This Privacy Policy
-      outlines how we collect, use, disclose, and protect your personal information
-      when you use the App. By using the App, you agree to the terms and practices
-      described in this Privacy Policy.
-    </p>
-  </section>
+        <main className=" flex-1 overflow-auto  md:px-2 py-2">
+          <div className="w-[100%] mx-auto bg-white p-6 rounded-lg shadow">
+            <h2 className="text-2xl font-bold mb-1">Terms & Conditions</h2>
+            <p className="text-sm text-gray-500 mb-6">Effective Date: 25 Nov, 2022</p>
 
-  {/* Section 2 */}
-  <section className="mb-6">
-    <h3 className="font-semibold mb-2">2. Information We Collect</h3>
-    <p className="text-[13px] text-gray-700 leading-7">
-      <strong>2.1 Personal Information:</strong> When you create an account, we may
-      collect personal information such as your name, email address, profile picture,
-      and location.
-      <br /><br />
-      <strong>2.2 User Content:</strong> The App allows you to post and share User
-      Content. This content may contain personal information that you choose to share
-      with others.
-      <br /><br />
-      <strong>2.3 Usage Data:</strong> We collect information about your interactions
-      with the App, including log data, device information, and usage patterns.
-    </p>
-  </section>
+            {/* Section 1 */}
+            <section className="mb-6">
+              <h3 className="font-semibold mb-2">1. Introduction</h3>
+              <p className="text-[13px] text-gray-700 leading-7">
+                Welcome to the You2Art App ("App", "We", "Us," or "Our"). This Privacy Policy
+                outlines how we collect, use, disclose, and protect your personal information
+                when you use the App. By using the App, you agree to the terms and practices
+                described in this Privacy Policy.
+              </p>
+            </section>
 
-  {/* Section 3 */}
-  <section className="mb-6">
-    <h3 className="font-semibold mb-2">3. How We Use Your Information</h3>
-    <p className="text-[13px] text-gray-700 leading-7">
-      <strong>3.1 Providing Services:</strong> We use your information to provide and
-      improve the services offered by the App, including personalized content and
-      recommendations.
-      <br /><br />
-      <strong>3.2 Communication:</strong> We may use your email address to send you
-      notifications, updates, and marketing materials related to the App. You can opt
-      out of these communications at any time.
-      <br /><br />
-      <strong>3.3 Analytics:</strong> We analyze user interactions to improve the App’s
-      functionality, user experience, and performance.
-    </p>
-  </section>
+            {/* Section 2 */}
+            <section className="mb-6">
+              <h3 className="font-semibold mb-2">2. Information We Collect</h3>
+              <p className="text-[13px] text-gray-700 leading-7">
+                <strong>2.1 Personal Information:</strong> When you create an account, we may
+                collect personal information such as your name, email address, profile picture,
+                and location.
+                <br /><br />
+                <strong>2.2 User Content:</strong> The App allows you to post and share User
+                Content. This content may contain personal information that you choose to share
+                with others.
+                <br /><br />
+                <strong>2.3 Usage Data:</strong> We collect information about your interactions
+                with the App, including log data, device information, and usage patterns.
+              </p>
+            </section>
 
-  {/* Section 4 */}
-  <section className="mb-6">
-    <h3 className="font-semibold mb-2">4. Sharing and Disclosure</h3>
-    <p className="text-[13px] text-gray-700 leading-7">
-      <strong>4.1 User Content:</strong> Your User Content may be visible to other users
-      of the App according to your privacy settings.
-      <br /><br />
-      <strong>4.2 Service Providers:</strong> We may share your information with
-      third-party service providers who assist in operating the App or providing
-      related services.
-      <br /><br />
-      <strong>4.3 Legal Compliance:</strong> We may disclose your information if required
-      by law, regulation, legal process, or governmental request.
-    </p>
-  </section>
-</main>
+            {/* Section 3 */}
+            <section className="mb-6">
+              <h3 className="font-semibold mb-2">3. How We Use Your Information</h3>
+              <p className="text-[13px] text-gray-700 leading-7">
+                <strong>3.1 Providing Services:</strong> We use your information to provide and
+                improve the services offered by the App, including personalized content and
+                recommendations.
+                <br /><br />
+                <strong>3.2 Communication:</strong> We may use your email address to send you
+                notifications, updates, and marketing materials related to the App. You can opt
+                out of these communications at any time.
+                <br /><br />
+                <strong>3.3 Analytics:</strong> We analyze user interactions to improve the App’s
+                functionality, user experience, and performance.
+              </p>
+            </section>
+
+            {/* Section 4 */}
+            <section className="mb-6">
+              <h3 className="font-semibold mb-2">4. Sharing and Disclosure</h3>
+              <p className="text-[13px] text-gray-700 leading-7">
+                <strong>4.1 User Content:</strong> Your User Content may be visible to other users
+                of the App according to your privacy settings.
+                <br /><br />
+                <strong>4.2 Service Providers:</strong> We may share your information with
+                third-party service providers who assist in operating the App or providing
+                related services.
+                <br /><br />
+                <strong>4.3 Legal Compliance:</strong> We may disclose your information if required
+                by law, regulation, legal process, or governmental request.
+              </p>
+            </section>
+          </div>
+        </main>
 
       </div>
     </div>

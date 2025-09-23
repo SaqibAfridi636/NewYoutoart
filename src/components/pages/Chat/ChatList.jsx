@@ -1,7 +1,9 @@
+
 import React, { useEffect, useState } from "react";
 import { formatTime } from "./TimeFormatter";
 
 const ChatList = ({ chats, selectedChat, onSelectChat }) => {
+  // tick to refresh relative times every minute
   const [, setTick] = useState(0);
   useEffect(() => {
     const i = setInterval(() => setTick((t) => t + 1), 60000);
@@ -11,8 +13,9 @@ const ChatList = ({ chats, selectedChat, onSelectChat }) => {
   const handleClick = (chat) => onSelectChat({ ...chat, unread: 0 });
 
   return (
-    <aside className="w-[270px] md:w-[300px] bg-white border-r flex flex-col">
-      <div className="flex-1 overflow-y-auto">
+    <aside className="w-[270px] md:w-[300px] bg-white border-r flex flex-col min-h-0">
+      
+      <div className="flex-1 overflow-y-auto overscroll-contain">
         {chats.map((chat) => {
           const active = selectedChat?.id === chat.id;
 

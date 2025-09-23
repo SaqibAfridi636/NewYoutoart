@@ -130,7 +130,8 @@ const WorkTab = () => {
               <img
                 src={photo.url}
                 alt={`Photo ${photo.id}`}
-                className="w-full h-48 object-cover"
+                className="w-full object-cover"
+                style={{ aspectRatio: '1 / 1', objectFit: 'cover' }}
               />
             </div>
           ))}

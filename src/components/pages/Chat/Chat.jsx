@@ -82,12 +82,12 @@ const ChatPage = () => {
   };
 
   return (
-    <div className="flex  bg-gray-50 overflow-hidden">
+    <div className="flex h-screen bg-gray-50 overflow-hidden">
       {/* Sidebar */}
       <Sidebar />
 
-      {/* Main */}
-      <div className="flex flex-col flex-1 overflow-hidden">
+  {/* Main */}
+  <div className="flex flex-col flex-1 min-h-0 overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between border-b p-3 bg-white">
           <h2 className="text-sm md:text-base font-semibold">Chat</h2>
@@ -106,8 +106,8 @@ const ChatPage = () => {
           </div>
         </div>
 
-        {/* Content */}
-        <div className="flex flex-1 overflow-hidden">
+  {/* Content */}
+  <div className="flex flex-1 min-h-0 overflow-hidden">
           <ChatList
             chats={chats}
             selectedChat={selectedChat}

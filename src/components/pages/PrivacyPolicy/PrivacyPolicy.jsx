@@ -10,39 +10,26 @@ const PrivacyPolicy = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex h-screen overflow-hidden bg-gray-50">
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} />
 
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col">
+  {/* Main Content */}
+      <div className="flex-1 flex flex-col min-h-0">
         {/* Header */}
-        <header className="w-full bg-white shadow-sm p-2 flex items-center justify-between">
-          {/* Left side - Hamburger + Title */}
-          <div className="flex items-center space-x-3">
-            {/* Mobile Hamburger */}
-            <button
-              className="md:hidden p-2 rounded hover:bg-gray-100"
-              onClick={() => setSidebarOpen(!sidebarOpen)}
-            >
-              ☰
-            </button>
-            <h1 className="text-lg font-semibold text-gray-800">
-              Privacy & Policy
-            </h1>
-          </div>
+        <header className="w-full bg-white shadow-sm p-2 flex items-center justify-between relative">
+          <h1 className="text-lg font-semibold text-gray-800">Privacy & Policy</h1>
 
-          {/* Right side - Search + Notification */}
           <div className="flex items-center space-x-4">
             {/* Search Bar */}
             <div className="relative">
-                       <input
-                         type="text"
-                         placeholder="Search"
-                         className="w-[220px] lg:w-[300px] pl-8 pr-3 py-2 rounded-full bg-gray-100 text-sm focus:outline-none"
-                       />
-                       <FiSearch className="absolute left-2.5 top-2.5 text-gray-500" />
-                     </div>
+              <input
+                type="text"
+                placeholder="Search"
+                className="w-[220px] lg:w-[300px] pl-8 pr-3 py-2 rounded-full bg-gray-100 text-sm focus:outline-none"
+              />
+              <FiSearch className="absolute left-2.5 top-2.5 text-gray-500" />
+            </div>
 
             {/* Notification */}
             <div className="relative">
@@ -50,7 +37,7 @@ const PrivacyPolicy = () => {
                 onClick={() => setShowNotifications(!showNotifications)}
                 className="p-2 rounded-full hover:bg-gray-100"
               >
-               <img src={Notificationicon} alt="" />
+                <img src={Notificationicon} alt="" />
               </button>
 
               {/* Dropdown */}
@@ -63,10 +50,11 @@ const PrivacyPolicy = () => {
           </div>
         </header>
 
-        {/* Content */}
-        <main className="flex-1 p-5 md:p-6 ">
-          <h2 className="text-2xl font-bold mb-2">Privacy Policy</h2>
-          <p className="text-sm text-gray-500 mb-6">Effective Date: 25 Nov, 2022</p>
+  {/* Content */}
+  <main className="flex-1 overflow-auto md:px-2 py-2">
+    <div className="w-[100%] mx-auto bg-white p-6 rounded-lg shadow">
+      <h2 className="text-2xl font-bold mb-2">Privacy Policy</h2>
+      <p className="text-sm text-gray-500 mb-6">Effective Date: 25 Nov, 2022</p>
 
           {/* Section 1 */}
           <section className="mb-6">
@@ -149,7 +137,8 @@ const PrivacyPolicy = () => {
               necessary to provide services or as required by law.
             </p>
           </section>
-        </main>
+    </div>
+  </main>
       </div>
     </div>
   );

@@ -30,7 +30,7 @@ const Sidebar = () => {
   }, [logoutOpen]);
 
   const linkClasses =
-    "flex items-center gap-3 px-3 py-2 rounded-md whitespace-nowrap";
+    "flex items-center gap-3 px-3 py-2 rounded-md whitespace-nowrap text-sm font-medium";
 
   // Confirm + navigate to Home
   const handleConfirmLogout = () => {
@@ -40,7 +40,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-64 h-full bg-white flex flex-col shadow-sm">
+  <div className="w-64 flex-shrink-0 bg-white flex flex-col h-full min-h-0 sticky top-0 shadow-sm">
       {/* Top - Logo */}
       <div className="flex items-center px-4 py-4 border-b">
         <img src={Logo} alt="Logo" className="h-8 w-auto" />
@@ -48,19 +48,19 @@ const Sidebar = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="flex-1 py-4 space-y-1 text-gray-700">
+    <nav className="flex-1 overflow-y-auto py-4 space-y-1 text-gray-700">
         <NavLink
           to="/home"
           className={({ isActive }) =>
             `${linkClasses} ${
               isActive
-                ? "bg-blue-50 text-blue-600"
+                ? "bg-blue-50 text-blue-600 rounded-lg"
                 : "hover:bg-blue-50 hover:text-blue-600"
             }`
           }
         >
-          <img src={Homeicon} alt="Home" />
-          Home
+          <img src={Homeicon} alt="Home" className="h-5 w-5" />
+          <span>Home</span>
         </NavLink>
 
         <NavLink
@@ -68,13 +68,13 @@ const Sidebar = () => {
           className={({ isActive }) =>
             `${linkClasses} ${
               isActive
-                ? "bg-blue-50 text-blue-600"
+                ? "bg-blue-50 text-blue-600 rounded-lg"
                 : "hover:bg-blue-50 hover:text-blue-600"
             }`
           }
         >
-          <img src={Talenticon} alt="Talent" />
-          Talent
+          <img src={Talenticon} alt="Talent" className="h-5 w-5" />
+          <span>Talent</span>
         </NavLink>
 
         <NavLink
@@ -82,13 +82,13 @@ const Sidebar = () => {
           className={({ isActive }) =>
             `${linkClasses} ${
               isActive
-                ? "bg-blue-50 text-blue-600"
+                ? "bg-blue-50 text-blue-600 rounded-lg"
                 : "hover:bg-blue-50 hover:text-blue-600"
             }`
           }
         >
-          <img src={Networkticon} alt="Network" />
-          Network
+          <img src={Networkticon} alt="Network" className="h-5 w-5" />
+          <span>Network</span>
         </NavLink>
 
         <NavLink
@@ -96,13 +96,13 @@ const Sidebar = () => {
           className={({ isActive }) =>
             `${linkClasses} ${
               isActive
-                ? "bg-blue-50 text-blue-600"
+                ? "bg-blue-50 text-blue-600 rounded-lg"
                 : "hover:bg-blue-50 hover:text-blue-600"
             }`
           }
         >
-          <img src={Castingticon} alt="Casting" />
-          Casting
+          <img src={Castingticon} alt="Casting" className="h-5 w-5" />
+          <span>Casting</span>
         </NavLink>
 
         <NavLink
@@ -110,13 +110,13 @@ const Sidebar = () => {
           className={({ isActive }) =>
             `${linkClasses} ${
               isActive
-                ? "bg-blue-50 text-blue-600"
+                ? "bg-blue-50 text-blue-600 rounded-lg"
                 : "hover:bg-blue-50 hover:text-blue-600"
             }`
           }
         >
-          <img src={Chaticon} alt="Chat" />
-          Chat
+          <img src={Chaticon} alt="Chat" className="h-5 w-5" />
+          <span>Chat</span>
         </NavLink>
 
         {/* Account Section */}
@@ -136,13 +136,13 @@ const Sidebar = () => {
                 className={({ isActive }) =>
                   `${linkClasses} ${
                     isActive
-                      ? "bg-blue-50 text-blue-600"
+                      ? "bg-blue-50 text-blue-600 rounded-lg"
                       : "hover:bg-blue-50 hover:text-blue-600"
                   }`
                 }
               >
-                <img src={Profileicon} alt="Profile" />
-                Profile
+                <img src={Profileicon} alt="Profile" className="h-5 w-5" />
+                <span>Profile</span>
               </NavLink>
 
               <NavLink
@@ -150,13 +150,13 @@ const Sidebar = () => {
                 className={({ isActive }) =>
                   `${linkClasses} ${
                     isActive
-                      ? "bg-blue-50 text-blue-600"
+                      ? "bg-blue-50 text-blue-600 rounded-lg"
                       : "hover:bg-blue-50 hover:text-blue-600"
                   }`
                 }
               >
-                <img src={Transactionicon} alt="Transaction History" />
-                Transaction History
+                <img src={Transactionicon} alt="Transaction History" className="h-5 w-5" />
+                <span>Transaction History</span>
               </NavLink>
 
               <NavLink
@@ -164,13 +164,13 @@ const Sidebar = () => {
                 className={({ isActive }) =>
                   `${linkClasses} ${
                     isActive
-                      ? "bg-blue-50 text-blue-600"
+                      ? "bg-blue-50 text-blue-600 rounded-lg"
                       : "hover:bg-blue-50 hover:text-blue-600"
                   }`
                 }
               >
-                <img src={Supporticon} alt="Support" />
-                Support
+                <img src={Supporticon} alt="Support" className="h-5 w-5" />
+                <span>Support</span>
               </NavLink>
 
               <NavLink
@@ -178,13 +178,13 @@ const Sidebar = () => {
                 className={({ isActive }) =>
                   `${linkClasses} ${
                     isActive
-                      ? "bg-blue-50 text-blue-600"
+                      ? "bg-blue-50 text-blue-600 rounded-lg"
                       : "hover:bg-blue-50 hover:text-blue-600"
                   }`
                 }
               >
-                <img src={Abouticon} alt="About Us" />
-                About Us
+                <img src={Abouticon} alt="About Us" className="h-5 w-5" />
+                <span>About Us</span>
               </NavLink>
 
               <NavLink
@@ -192,13 +192,13 @@ const Sidebar = () => {
                 className={({ isActive }) =>
                   `${linkClasses} ${
                     isActive
-                      ? "bg-blue-50 text-blue-600"
+                      ? "bg-blue-50 text-blue-600 rounded-lg"
                       : "hover:bg-blue-50 hover:text-blue-600"
                   }`
                 }
               >
-                <img src={Conditionsicon} alt="Terms" />
-                Terms & Conditions
+                <img src={Conditionsicon} alt="Terms" className="h-5 w-5" />
+                <span>Terms & Conditions</span>
               </NavLink>
 
               <NavLink
@@ -206,13 +206,13 @@ const Sidebar = () => {
                 className={({ isActive }) =>
                   `${linkClasses} ${
                     isActive
-                      ? "bg-blue-50 text-blue-600"
+                      ? "bg-blue-50 text-blue-600 rounded-lg"
                       : "hover:bg-blue-50 hover:text-blue-600"
                   }`
                 }
               >
-                <img src={Conditionsicon} alt="Privacy Policy" />
-                Privacy Policy
+                <img src={Conditionsicon} alt="Privacy Policy" className="h-5 w-5" />
+                <span>Privacy Policy</span>
               </NavLink>
             </>
           )}
@@ -220,13 +220,13 @@ const Sidebar = () => {
       </nav>
 
       {/* Logout at bottom */}
-      <div className="px-2 py-4 border-t">
+    <div className="px-2 py-4 border-t mt-auto">
         <button
           onClick={() => setLogoutOpen(true)}
-          className="flex items-center gap-3 px-3 py-2 text-red-500 hover:bg-red-50 rounded-md w-full text-left"
+          className="flex items-center gap-3 px-3 py-2 text-red-500 hover:bg-red-50 rounded-md w-full text-left text-sm font-medium"
         >
-          <img src={Logouticon} alt="Logout" />
-          Logout
+          <img src={Logouticon} alt="Logout" className="h-5 w-5" />
+          <span>Logout</span>
         </button>
       </div>
 
