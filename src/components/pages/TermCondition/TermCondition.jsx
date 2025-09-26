@@ -14,9 +14,9 @@ const TermsConditions = () => {
       <Sidebar />
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col min-h-0">
-        {/* ✅ Keep your old Header */}
-        <header className="w-full bg-white shadow-sm p-2 flex items-center justify-between relative">
+      <div className="flex-1 p-2 flex flex-col min-h-0">
+        {/* Header */}
+        <header className="w-full bg-white rounded shadow-sm p-2 flex items-center  justify-between ">
           <h1 className="text-lg font-semibold text-gray-800">
             Terms & Conditions
           </h1>
@@ -50,9 +50,8 @@ const TermsConditions = () => {
           </div>
         </header>
 
-
-        <main className=" flex-1 overflow-auto  md:px-2 py-2">
-          <div className="w-[100%] mx-auto bg-white p-6 rounded-lg shadow">
+        <main className="w-full flex-1 overflow-auto  md:px-2 p-2">
+          <div className="w-full mx-auto bg-white p-4 rounded-lg shadow">
             <h2 className="text-2xl font-bold mb-1">Terms & Conditions</h2>
             <p className="text-sm text-gray-500 mb-6">Effective Date: 25 Nov, 2022</p>
 

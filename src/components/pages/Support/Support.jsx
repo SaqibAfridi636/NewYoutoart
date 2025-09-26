@@ -36,9 +36,9 @@ const Support = () => {
       <Sidebar />
 
       {/* Main Content */}
-      <div className="flex-1 p-6 relative">
+      <div className="flex-1 p-2 relative">
         {/* Local Header */}
-        <div className="w-full h-[80px] flex justify-between items-center bg-white px-4 shadow mb-6">
+        <div className="w-full h-[60px] rounded flex justify-between items-center bg-white px-4 shadow mb-2">
           <h1 className="text-xl font-semibold text-gray-800">Help & Support</h1>
 
           <div className="flex items-center gap-4">
@@ -57,13 +57,13 @@ const Support = () => {
               onClick={() => setShowNotifications(!showNotifications)}
               className="relative"
             >
-              <img src={Notificationicon} alt="notifications" className="w-6 h-6" />
+              <img src={Notificationicon} alt="notifications"  />
             </button>
           </div>
         </div>
 
         {/* FAQ Section */}
-        <div className="bg-white rounded-md shadow mb-6">
+        <div className="h-[80vh] bg-white rounded-md shadow mb-6">
           <div className="border-b px-4 py-2 bg-gray-100 text-sm font-medium text-gray-600">
             Frequently Asked Questions
           </div>
@@ -91,7 +91,7 @@ const Support = () => {
 
         {/* Show Notification Section when toggled */}
         {showNotifications && (
-          <div className="absolute top-20 right-6 w-96 z-50">
+          <div className="absolute top-20 right-[5px] w-96 z-50">
             <NotificationSection />
           </div>
         )}

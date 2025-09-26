@@ -82,9 +82,9 @@ const TransactionHistory = () => {
       <Sidebar />
 
       {/* Main Content */}
-      <div className="flex-1 p-[10px]">
+      <div className="flex-1 p-[5px]">
         {/* Page Header */}
-        <div className="w-full h-[60px] flex justify-between items-center bg-white px-4 shadow mb-6">
+        <div className="w-full h-[60px] rounded flex justify-between items-center bg-white px-4 shadow mb-2">
           <h2 className="text-xl font-semibold">Transaction History</h2>
 
           <div className="flex items-center gap-4">
@@ -118,9 +118,9 @@ const TransactionHistory = () => {
         </div>
 
         {/* Transactions Card */}
-        <div className="bg-white rounded-md shadow p-6">
+        <div className="bg-white rounded-md shadow p-4">
           {transactions.map((day) => (
-            <div key={day.id} className="mb-8">
+            <div key={day.id} >
               {/* Date + Amount */}
               <div className="flex justify-between items-center border-b pb-1 mb-3">
                 <span className="text-sm font-medium text-gray-600">

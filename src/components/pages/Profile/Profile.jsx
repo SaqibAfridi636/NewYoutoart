@@ -25,9 +25,8 @@ const Profile = () => {
   return (
     <div className="flex min-h-screen bg-gray-50">
       {/* Sidebar */}
-      <div className="hidden md:block w-64">
         <Sidebar />
-      </div>
+    
 
       {/* Mobile Sidebar */}
       {showSidebar && (
