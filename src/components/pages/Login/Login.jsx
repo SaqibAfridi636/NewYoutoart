@@ -50,10 +50,10 @@ const Login = () => {
                     </p>
 
                     {/* Terms */}
-                    <p className="w-[270px] text-xs text-gray-500 pt-[150px]">
-                        By <span className="font-semibold">Sign In</span>, you agree with{" "}
+                    <p className="w-[270px] text-xs text-gray-500 pt-[180px]">
+                        By <span className="font-semibold">Sign In</span>,  you agree with{" "}
                         <a href="#" className="text-blue-600">
-                            Terms & Conditions
+                            Terms & <br /> Conditions
                         </a>{" "}
                         of You2Art
                     </p>

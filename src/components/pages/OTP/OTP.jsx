@@ -98,7 +98,7 @@ const OTP = () => {
                     </p>
                 </div>
 
-                {/* ✅ Account Created Popup */}
+                {/*  Account Created Popup */}
                 {showCreatedPopup && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
                         <div className="max-w-[364px] max-h-[269px] bg-white p-6 rounded-lg shadow-lg text-center">
@@ -124,7 +124,7 @@ const OTP = () => {
                     </div>
                 )}
 
-                {/* ✅ Verification Success Popup */}
+                {/* Verification Success Popup */}
                 {showVerifySuccess && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black/50">
                         <div className="bg-white rounded-xl shadow-lg p-8 text-center">
@@ -146,7 +146,7 @@ const OTP = () => {
 
 
 
-                {/* ✅ Step 1 - Choose Category Popup */}
+                {/*  Step 1 - Choose Category Popup */}
                 {showCompleteProfilePopup && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
                         <div className="w-[580px] h-[580px] bg-white p-6 rounded-lg shadow-lg flex flex-col">
@@ -207,7 +207,7 @@ const OTP = () => {
                     </div>
                 )}
 
-                {/* ✅ Step 2 - Complete Profile Form Popup */}
+                {/* Step 2 - Complete Profile Form Popup */}
                 {showStep2Popup && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
                         <div className="w-[580px] h-[580px] bg-white p-6 rounded-lg shadow-lg flex flex-col">
@@ -264,7 +264,7 @@ const OTP = () => {
                                 <div className="flex gap-4">
                                     <button onClick={() => { handleSkipProfile(); navigate('/home'); }} className="w-[120px] h-10 bg-gray-200 rounded-full">Skip For Now</button>
                                     <button
-                                        onClick={() => navigate("/home")}  // ✅ Navigate to home
+                                        onClick={() => navigate("/home")}  // Navigate to home
                                         className="w-[110px] h-10 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition"
                                     >
                                         Submit

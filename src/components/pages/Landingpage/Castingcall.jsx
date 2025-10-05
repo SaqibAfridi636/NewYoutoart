@@ -7,7 +7,7 @@ const CastingCall = () => {
       id: 1,
       title: "The Next Short Film",
       director: "James Geldt",
-      description: "We're looking for talented actors for our upcoming short film. Auditions will be held next week.",
+      description: "We're looking for talented actors for our upcoming short film. Auditions will be held next.",
       location: "Islamabad",
       type: "Short Film",
       duration: "25 Days",
