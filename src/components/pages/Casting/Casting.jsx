@@ -5,7 +5,7 @@ import HomeHeader from "../../common/HomeHeader";
 import CastingHeader from "./CastingHeader";
 import CastingCall from "./CastingCall";
 import Applied from "./Applied";
-import MyCastingCall from "./MyCastingCall";
+import MyCastingCall from "./MyCastingcall";
 
 const Casting = () => {
   const [activeTab, setActiveTab] = useState("casting");
