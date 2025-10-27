@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
-import Notificationicon from "../../assets/icons/Notificationicon.png";
+import Notificationicon from "../../assets/Icons/Notificationicon.png";
 import NotificationSection from "./NotificationSection"; // ✅ path adjust karo
 
 const HomeHeader = () => {

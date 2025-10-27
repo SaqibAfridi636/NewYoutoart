@@ -8,7 +8,6 @@ import Talenticon from "../../../../assets/Icons/Talenticon.png";
 import Networkticon from "../../../../assets/Icons/Networkicon.png";
 import Castingticon from "../../../../assets/Icons/Castingicon.png";
 import Chaticon from "../../../../assets/Icons/Chaticon.png";
-import Contenticon from "../../../../assets/Icons/Contenticon.png";
 import Profileicon from "../../../../assets/Icons/Profileicon.png";
 import Transactionicon from "../../../../assets/Icons/Transactionicon.png";
 import Supporticon from "../../../../assets/Icons/Supporticon.png";
