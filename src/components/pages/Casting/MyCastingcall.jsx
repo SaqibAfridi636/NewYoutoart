@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import Moreicon from "../../../assets/Icons/Moreicon.png";
-import PakistanFlag from "../../../assets/images/PakistanFlag.png";
+import PakistanFlag from "../../../assets/images/Pakistanflag.png";
 import Deleteicon from "../../../assets/Icons/Deleteicon.png";
 
 // Use your own assets exactly as requested. No third-party icon sets besides react-icons (FaUserCircle).

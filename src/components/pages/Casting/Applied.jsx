@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import Moreicon from "../../../assets/Icons/Moreicon.png";
-import PakistanFlag from "../../../assets/images/PakistanFlag.png";
+import PakistanFlag from "../../../assets/images/Pakistanflag.png";
 import Appliedicon from "../../../assets/Icons/Appliedicon.png";
 
 // Sample data (duplicated rows to fill the left list like the screenshot)
