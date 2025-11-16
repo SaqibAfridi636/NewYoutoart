@@ -253,6 +253,7 @@ const OTP = () => {
                                 </label>
                             </div>
 
+
                             <label>
                                 Short Bio <span className="text-red-500">*</span>
                             </label>
